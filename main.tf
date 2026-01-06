@@ -1,4 +1,4 @@
-terraform {
+nsterraform {
   required_providers {
     azurerm = {
       source = "hashicorp/azurerm"
@@ -9,13 +9,13 @@ terraform {
 
 provider "azurerm" {
   features {}
-  subscription_id = "<your subscription id here>"
+  subscription_id = "21f80c07-f56f-48bc-940a-d95410f4d9cd"
 }
 
 terraform {
   backend "azurerm" {
     resource_group_name  = "RG1"
-    storage_account_name = "<your storage account>"
+    storage_account_name = "jenkinsstatesh"
     container_name       = "terraform-state"
     key                  = "terraform.tfstate"
   }
